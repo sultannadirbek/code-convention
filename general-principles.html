@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Общие Принципы | Манифест PHP Mechta.kz</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link href="./styles/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap&subset=cyrillic"
+          rel="stylesheet">
+</head>
+<body>
+<div class="container py-5">
+    <svg viewBox="0 0 114 17" xmlns="http://www.w3.org/2000/svg"
+         class="inline-block q-mb-lg vertical-middle fill-primary tw-h-8 tw-w-[209px]">
+        <path d="M8.712 0a8.867 8.867 0 0 0-4.84 1.432A8.549 8.549 0 0 0 .665 5.245a8.308 8.308 0 0 0-.497 4.91 8.438 8.438 0 0 0 2.38 4.352 8.781 8.781 0 0 0 4.459 2.328c1.689.33 3.44.163 5.032-.479a8.67 8.67 0 0 0 3.912-3.126 8.355 8.355 0 0 0 .821-7.98 8.462 8.462 0 0 0-1.887-2.765A8.703 8.703 0 0 0 12.053.641 8.873 8.873 0 0 0 8.712 0Zm0 15.246a7.04 7.04 0 0 1-3.844-1.138 6.788 6.788 0 0 1-2.548-3.03 6.597 6.597 0 0 1-.392-3.902 6.7 6.7 0 0 1 1.897-3.455A6.973 6.973 0 0 1 7.37 1.876a7.078 7.078 0 0 1 3.997.39 6.882 6.882 0 0 1 3.102 2.49 6.632 6.632 0 0 1 1.16 3.753 6.685 6.685 0 0 1-2.035 4.76 7.023 7.023 0 0 1-4.882 1.977Z"></path>
+        <path d="M6.464 4.968 12.697 7.9a.676.676 0 0 1 .286.245.652.652 0 0 1 0 .713.676.676 0 0 1-.286.245l-6.233 2.93a.693.693 0 0 1-.65-.044.65.65 0 0 1-.312-.557V5.57a.65.65 0 0 1 .313-.557.69.69 0 0 1 .649-.044Zm21.934 5.445a130.49 130.49 0 0 0-4.075-8.75h-3.741v13.675h2.64V5.156c.79 1.628 2.087 4.604 3.888 8.927h2.14c1.559-3.59 2.89-6.573 4.033-8.927v10.182h2.682V1.662h-3.553c-1.56 3.022-2.898 5.939-4.014 8.751Zm13.83-5.237c-3.26 0-4.927 1.294-4.927 5.12 0 1.942.437 3.213 1.33 4.017.893.804 2.162 1.197 3.805 1.197a15.277 15.277 0 0 0 3.995-.55l-.416-1.923a13.835 13.835 0 0 1-3.267.412c-.977 0-1.68-.176-2.1-.51-.416-.353-.623-.937-.644-1.957h6.901c.083-2.41-.207-3.806-1.04-4.668-.81-.863-1.87-1.138-3.637-1.138Zm-2.206 3.942c.142-1.542.706-2.024 2.307-2.024.769 0 1.285.136 1.56.431.269.275.442.832.477 1.588l-4.344.005Zm13.501-1.823a7.19 7.19 0 0 1 2.453.432l.582-2.08c-.89-.314-1.977-.471-3.223-.471-1.725 0-3.015.392-3.908 1.177-.89.766-1.33 2-1.33 3.943 0 1.941.437 3.213 1.33 4.017.893.804 2.183 1.197 3.908 1.197 1.247 0 2.328-.177 3.223-.51l-.582-2.08a6.803 6.803 0 0 1-2.453.47c-.998 0-1.705-.216-2.141-.627-.415-.432-.624-1.173-.624-2.428.104-2.766.79-3.04 2.765-3.04ZM65.45 5.529c-.52-.236-1.205-.353-2.1-.353a6.654 6.654 0 0 0-2.91.686v-4.69h-2.577v14.166h2.578V8.256c0-.55.89-.883 2.037-.883 1.497 0 2.12.51 2.12 2.531v5.434h2.579v-5.63c-.001-2.433-.666-3.73-1.727-4.18Zm8.565 7.881c-1.143 0-1.6-.568-1.6-1.745V7.47h3.512V5.349h-3.514V2.663l-2.577 1.001v1.687h-1.767v2.121h1.767v4.41c0 1.413.27 2.374.831 2.884.561.491 1.456.746 2.703.746a9.193 9.193 0 0 0 2.91-.452l-.458-1.922a6.42 6.42 0 0 1-1.807.273Zm12.405 1.418c-1.549.463-3.16.693-4.781.682-1.68 0-2.866-.236-3.513-.687-.644-.47-.957-1.253-.957-2.546 0-1.314.333-2.178 1.02-2.61.685-.451 1.745-.667 3.139-.667a14.2 14.2 0 0 1 2.618.274c0-.883-.166-1.35-.494-1.627-.332-.294-1.04-.432-2.141-.432a9.823 9.823 0 0 0-3.202.49l-.478-2a17.403 17.403 0 0 1 4.22-.53c1.622 0 2.786.294 3.493.868.727.566 1.077 1.565 1.077 3.02v5.765Zm-2.47-3.905a10.804 10.804 0 0 0-2.1-.176c-1.559 0-1.976.193-1.976 1.432 0 .668.125.996.375 1.193.249.177.768.275 1.58.275a8.614 8.614 0 0 0 2.121-.23v-2.494Zm8.192 2.983c0 1.295-.382 1.53-1.608 1.53-1.166 0-1.549-.235-1.549-1.53 0-1.196.383-1.374 1.549-1.374 1.227.002 1.608.178 1.608 1.374Zm8.93 1.432c-2.313-3.278-3.72-5.042-4.284-5.278v5.278h-2.494V1.172h2.494v8.888c.563-.451 1.95-2.06 3.961-4.709h2.956c-1.97 2.59-3.379 4.121-3.921 4.532.523.314 2.051 2.138 4.223 5.455h-2.935ZM114 5.351v.491c-1.448 2.276-3.921 5.71-5.269 7.378h5.128v2.12h-9.029v-.492c1.95-2.41 4.348-5.768 5.349-7.377h-5.007V5.349l8.828.002Z"></path>
+    </svg>
+
+    <h1 class="text-center mb-5">Общие Принципы</h1>
+
+    <!-- Чистая Архитектура -->
+    <div class="card" id="clearArchCard">
+        <div class="accordion" id="cleanArchAccordion">
+            <!-- Что такое Чистая Архитектура -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingWhatIsCleanArch">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseWhatIsCleanArch" aria-expanded="true"
+                            aria-controls="collapseWhatIsCleanArch">
+                        Что такое Чистая Архитектура
+                    </button>
+                </h2>
+                <div id="collapseWhatIsCleanArch" class="accordion-collapse collapse show"
+                     aria-labelledby="headingWhatIsCleanArch" data-bs-parent="#cleanArchAccordion">
+                    <div class="accordion-body">
+                        Чистая архитектура — это метод проектирования программного обеспечения, который помогает строить
+                        системы, где основной фокус сделан на доменной логике, а не на технических деталях. Её цель —
+                        отделить бизнес-логику от инфраструктурных деталей, чтобы система оставалась гибкой и легко
+                        поддерживаемой. Важно, чтобы изменения в интерфейсе или базе данных не влияли на основную логику
+                        приложения.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Основные Принципы Чистой Архитектуры -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingPrinciplesCleanArch">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapsePrinciplesCleanArch" aria-expanded="false"
+                            aria-controls="collapsePrinciplesCleanArch">
+                        Основные Принципы Чистой Архитектуры
+                    </button>
+                </h2>
+                <div id="collapsePrinciplesCleanArch" class="accordion-collapse collapse"
+                     aria-labelledby="headingPrinciplesCleanArch" data-bs-parent="#cleanArchAccordion">
+                    <div class="accordion-body">
+                        <ol>
+                            <li><strong>Независимость от фреймворков</strong>: Фреймворки — это инструменты, которые не
+                                должны диктовать архитектуру системы. Приложение должно быть легко переносимым между
+                                фреймворками.
+                            </li>
+                            <li><strong>Независимость от интерфейса</strong>: Доменная логика не должна зависеть от
+                                пользовательского интерфейса. Вы можете изменить UI, не затрагивая основную логику
+                                приложения.
+                            </li>
+                            <li><strong>Независимость от базы данных</strong>: Данные и их хранение должны быть отделены
+                                от доменной логики. Это позволит легко заменить базу данных или изменить способ хранения
+                                данных.
+                            </li>
+                            <li><strong>Независимость от внешних сервисов</strong>: Приложение должно быть способно
+                                работать независимо от внешних сервисов и легко адаптироваться к их изменениям.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SOLID Принципы -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSolidPrinciples">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSolidPrinciples" aria-expanded="false"
+                            aria-controls="collapseSolidPrinciples">
+                        SOLID Принципы
+                    </button>
+                </h2>
+                <div id="collapseSolidPrinciples" class="accordion-collapse collapse"
+                     aria-labelledby="headingSolidPrinciples" data-bs-parent="#cleanArchAccordion">
+                    <div class="accordion-body">
+                        <h3>SOLID — набор пяти основных принципов:</h3>
+                        <ul>
+                            <li><strong>S — Single Responsibility Principle</strong>: Каждый класс или модуль должен
+                                иметь только одну причину для изменений.
+                            </li>
+                            <li><strong>O — Open/Closed Principle</strong>: Классы должны быть открыты для расширения,
+                                но закрыты для модификации.
+                            </li>
+                            <li><strong>L — Liskov Substitution Principle</strong>: Объекты подклассов должны заменять
+                                объекты базового класса без нарушения программы.
+                            </li>
+                            <li><strong>I — Interface Segregation Principle</strong>: Лучше иметь несколько
+                                специализированных интерфейсов, чем один общий.
+                            </li>
+                            <li><strong>D — Dependency Inversion Principle</strong>: Модули должны зависеть от
+                                абстракций, а не от конкретных реализаций.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Как это работает на практике? -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingPracticalExample">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapsePracticalExample" aria-expanded="false"
+                            aria-controls="collapsePracticalExample">
+                        Как это работает на практике?
+                    </button>
+                </h2>
+                <div id="collapsePracticalExample" class="accordion-collapse collapse"
+                     aria-labelledby="headingPracticalExample" data-bs-parent="#cleanArchAccordion">
+                    <div class="accordion-body">
+                        Когда вы пишете код с использованием чистой архитектуры, ваш основной фокус — это доменная
+                        логика. Все остальные части системы — это лишь инструменты, которые помогают этой логике
+                        работать. Например, вместо того чтобы строить приложение вокруг базы данных или
+                        пользовательского интерфейса, вы строите систему вокруг бизнес-правил и логики.
+
+                        <div class="accordion" id="architectureLayersAccordion">
+                            <!-- Presentation Layer -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingPresentation">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapsePresentation" aria-expanded="true"
+                                            aria-controls="collapsePresentation">
+                                        Presentation Layer (Http, Console)
+                                    </button>
+                                </h2>
+                                <div id="collapsePresentation" class="accordion-collapse collapse show"
+                                     aria-labelledby="headingPresentation"
+                                     data-bs-parent="#architectureLayersAccordion">
+                                    <div class="accordion-body">
+                                        Presentation Layer — это слой, отвечающий за взаимодействие пользователя или
+                                        внешних систем с
+                                        приложением. Это могут быть HTTP-запросы, консольные команды и другие
+                                        интерфейсы.
+                                        <ul>
+                                            <li><strong>Http:</strong> Управляет запросами и ответами, обеспечивая
+                                                взаимодействие через
+                                                браузер или API.
+                                            </li>
+                                            <li><strong>Console:</strong> Управляет командной строкой для выполнения
+                                                задач и скриптов.
+                                            </li>
+                                        </ul>
+                                        Этот слой не должен содержать бизнес-логику. Он передаёт данные в <strong>Application
+                                        Layer</strong> и возвращает результат.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Application Layer -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingApplication">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseApplication" aria-expanded="false"
+                                            aria-controls="collapseApplication">
+                                        Application Layer (Use Cases, Input, Output)
+                                    </button>
+                                </h2>
+                                <div id="collapseApplication" class="accordion-collapse collapse"
+                                     aria-labelledby="headingApplication"
+                                     data-bs-parent="#architectureLayersAccordion">
+                                    <div class="accordion-body">
+                                        Application Layer управляет основными бизнес-процессами. Здесь находятся
+                                        <strong>Use
+                                            Cases</strong>, описывающие сценарии использования.
+                                        <ul>
+                                            <li><strong>Input:</strong> Принимает данные из Presentation Layer и
+                                                направляет их в
+                                                бизнес-процессы.
+                                            </li>
+                                            <li><strong>Output:</strong> Возвращает результаты из Application Layer в
+                                                Presentation
+                                                Layer.
+                                            </li>
+                                        </ul>
+                                        Application Layer не должен знать о технологиях (например, базы данных или API)
+                                        и работать
+                                        только с интерфейсами.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Anti-Corruption Layer -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingAntiCorruption">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseAntiCorruption" aria-expanded="false"
+                                            aria-controls="collapseAntiCorruption">
+                                        Anti-Corruption Layer (Aggregates, Services)
+                                    </button>
+                                </h2>
+                                <div id="collapseAntiCorruption" class="accordion-collapse collapse"
+                                     aria-labelledby="headingAntiCorruption"
+                                     data-bs-parent="#architectureLayersAccordion">
+                                    <div class="accordion-body">
+                                        Anti-Corruption Layer помогает защитить доменную логику от сложностей внешних
+                                        систем. Этот слой
+                                        не всегда нужен, и его можно пропустить, если взаимодействие с внешними
+                                        системами не требует
+                                        сложных преобразований данных.
+                                        <ul>
+                                            <li><strong>Aggregates:</strong> Группы объектов, которые ведут себя как
+                                                единое целое.
+                                            </li>
+                                            <li><strong>Services:</strong> Выполняют операции, которые не могут быть
+                                                привязаны к
+                                                конкретным объектам.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Domain Layer -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingDomain">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseDomain" aria-expanded="false"
+                                            aria-controls="collapseDomain">
+                                        Domain Layer (Entities, Services, Repository Interfaces, Value Objects)
+                                    </button>
+                                </h2>
+                                <div id="collapseDomain" class="accordion-collapse collapse"
+                                     aria-labelledby="headingDomain"
+                                     data-bs-parent="#architectureLayersAccordion">
+                                    <div class="accordion-body">
+                                        Domain Layer — это слой, содержащий бизнес-логику. Он включает в себя сущности и
+                                        их критическую
+                                        логику, а также интерфейсы репозиториев.
+                                        <ul>
+                                            <li><strong>Entities:</strong> Основные объекты доменной логики (например,
+                                                Пользователь,
+                                                Заказ).
+                                            </li>
+                                            <li><strong>Value Objects (VO):</strong> Объекты, представляющие ценности
+                                                без уникальных
+                                                идентификаторов (например, Email).
+                                            </li>
+                                            <li><strong>Repository Interfaces:</strong> Интерфейсы, которые определяют
+                                                методы сохранения
+                                                и извлечения данных.
+                                            </li>
+                                            <li><strong>Services:</strong> Операции, которые нельзя привязать к
+                                                конкретным объектам.
+                                            </li>
+                                        </ul>
+                                        Domain Layer не зависит от инфраструктурных или внешних сервисов.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Infrastructure Layer -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingInfrastructure">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseInfrastructure" aria-expanded="false"
+                                            aria-controls="collapseInfrastructure">
+                                        Infrastructure Layer (Infrastructure Services, Repositories)
+                                    </button>
+                                </h2>
+                                <div id="collapseInfrastructure" class="accordion-collapse collapse"
+                                     aria-labelledby="headingInfrastructure"
+                                     data-bs-parent="#architectureLayersAccordion">
+                                    <div class="accordion-body">
+                                        Infrastructure Layer управляет взаимодействием с внешними системами (базы
+                                        данных, API, файловые
+                                        системы).
+                                        <ul>
+                                            <li><strong>Repositories:</strong> Реализация интерфейсов репозиториев из
+                                                Domain Layer.
+                                            </li>
+                                            <li><strong>Infrastructure Services:</strong> Сервисы, которые
+                                                взаимодействуют с внешними
+                                                системами (например, базы данных или API).
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Core Layer -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingCore">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseCore" aria-expanded="false"
+                                            aria-controls="collapseCore">
+                                        Core Layer (Utils, Traits, Helpers)
+                                    </button>
+                                </h2>
+                                <div id="collapseCore" class="accordion-collapse collapse" aria-labelledby="headingCore"
+                                     data-bs-parent="#architectureLayersAccordion">
+                                    <div class="accordion-body">
+                                        Core Layer включает в себя общие утилиты и вспомогательные инструменты.
+                                        <ul>
+                                            <li><strong>Utils:</strong> Вспомогательные классы и функции для общих задач
+                                                (например,
+                                                форматирование дат).
+                                            </li>
+                                            <li><strong>Traits:</strong> Наборы методов для многократного использования.
+                                            </li>
+                                            <li><strong>Helpers:</strong> Вспомогательные функции для небольших
+                                                операций.
+                                            </li>
+                                        </ul>
+                                        Этот слой не содержит сложной бизнес-логики и предназначен для общего
+                                        использования в проекте.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Зачем всё это нужно? -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingWhyIsItNeeded">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseWhyIsItNeeded" aria-expanded="false"
+                            aria-controls="collapseWhyIsItNeeded">
+                        Зачем всё это нужно?
+                    </button>
+                </h2>
+                <div id="collapseWhyIsItNeeded" class="accordion-collapse collapse"
+                     aria-labelledby="headingWhyIsItNeeded" data-bs-parent="#cleanArchAccordion">
+                    <div class="accordion-body">
+                        Основное преимущество чистой архитектуры — это гибкость и поддерживаемость кода в долгосрочной
+                        перспективе. Вы можете легко добавлять новые функции, не нарушая существующую логику. Она также
+                        упрощает тестирование, так как каждый уровень системы может быть протестирован отдельно.
+
+                        Более того, чистая архитектура делает систему независимой от технологий, что позволяет менять
+                        фреймворки, базы данных и другие детали без значительных изменений в бизнес-логике.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Domain-Driven Design -->
+    <div class="card mt-5" id="dddCard">
+        <div class="accordion" id="dddAccordion">
+            <!-- Что такое DDD -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingWhatIsDDD">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseWhatIsDDD" aria-expanded="true" aria-controls="collapseWhatIsDDD">
+                        Что такое Domain-Driven Design (DDD)?
+                    </button>
+                </h2>
+                <div id="collapseWhatIsDDD" class="accordion-collapse collapse show" aria-labelledby="headingWhatIsDDD"
+                     data-bs-parent="#dddAccordion">
+                    <div class="accordion-body">
+                        Domain-Driven Design (DDD) — это подход к разработке программного обеспечения, где основное
+                        внимание уделяется доменной модели, т.е. представлению реального мира в системе. В основе DDD
+                        лежит глубокое понимание бизнеса и его процессов, которое отражается в коде с помощью сущностей,
+                        объектов-значений, репозиториев и доменных сервисов. Важной частью DDD является создание модели,
+                        которая точно описывает бизнес-правила и законы.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Сущности (Entities) -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingEntities">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseEntities" aria-expanded="false" aria-controls="collapseEntities">
+                        Сущности (Entities)
+                    </button>
+                </h2>
+                <div id="collapseEntities" class="accordion-collapse collapse" aria-labelledby="headingEntities"
+                     data-bs-parent="#dddAccordion">
+                    <div class="accordion-body">
+                        Сущности — это объекты, которые обладают уникальной идентичностью. В контексте DDD сущности
+                        представляют ключевые объекты доменной модели, которые могут изменяться с течением времени, но
+                        их уникальная идентификация остаётся постоянной. Примеры сущностей:
+                        <ul>
+                            <li><strong>Пользователь</strong>: Идентифицируется уникальным ID, может изменять свои
+                                данные, но всегда остаётся тем же пользователем.
+                            </li>
+                            <li><strong>Заказ</strong>: Идентифицируется номером заказа, который остаётся неизменным,
+                                даже если статус или содержимое заказа меняются.
+                            </li>
+                        </ul>
+                        <p>Сущности могут содержать поведение и методы, относящиеся к доменной логике, например,
+                            валидацию данных или бизнес-правила.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Объекты Значений (Value Objects) -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingValueObjects">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseValueObjects" aria-expanded="false"
+                            aria-controls="collapseValueObjects">
+                        Объекты Значений (Value Objects)
+                    </button>
+                </h2>
+                <div id="collapseValueObjects" class="accordion-collapse collapse" aria-labelledby="headingValueObjects"
+                     data-bs-parent="#dddAccordion">
+                    <div class="accordion-body">
+                        Объекты значений (Value Objects) представляют собой объекты, которые не имеют уникальной
+                        идентичности и определяются только своими атрибутами. Они неизменяемы и обычно используются для
+                        представления мелких концепций, таких как:
+                        <ul>
+                            <li><strong>Email</strong>: Содержит значение электронной почты, проверяет корректность
+                                формата.
+                            </li>
+                            <li><strong>Адрес</strong>: Содержит адресную информацию, такую как улица, город, индекс.
+                            </li>
+                        </ul>
+                        <p>Объекты значений не изменяются после создания. Если требуется изменение, создаётся новый
+                            объект.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Репозитории (Repositories) -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingRepositories">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseRepositories" aria-expanded="false"
+                            aria-controls="collapseRepositories">
+                        Репозитории (Repositories)
+                    </button>
+                </h2>
+                <div id="collapseRepositories" class="accordion-collapse collapse" aria-labelledby="headingRepositories"
+                     data-bs-parent="#dddAccordion">
+                    <div class="accordion-body">
+                        Репозитории отвечают за управление жизненным циклом сущностей. Они предоставляют интерфейсы для
+                        получения, сохранения и удаления сущностей из хранилища данных (например, базы данных).
+                        Репозитории работают с абстракциями, позволяя изменять детали хранения данных без изменения
+                        бизнес-логики.
+                        <ul>
+                            <li><strong>Пример:</strong> Репозиторий пользователей отвечает за операции создания,
+                                поиска, обновления и удаления объектов пользователя в системе.
+                            </li>
+                        </ul>
+                        <p>Важно: Репозитории работают только с сущностями и не должны включать бизнес-логику.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Сервисы (Domain Services) -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingServices">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseServices" aria-expanded="false" aria-controls="collapseServices">
+                        Сервисы (Domain Services)
+                    </button>
+                </h2>
+                <div id="collapseServices" class="accordion-collapse collapse" aria-labelledby="headingServices"
+                     data-bs-parent="#dddAccordion">
+                    <div class="accordion-body">
+                        Сервисы (Domain Services) — это компонент, который инкапсулирует критическую логику, связанную с
+                        одной сущностью. Доменные сервисы управляют важными правилами и операциями, которые нельзя
+                        логично разместить внутри сущности, но при этом они тесно связаны с её поведением.
+                        <ul>
+                            <li><strong>Пример:</strong> Сервис оплаты может обрабатывать процесс взаимодействия с
+                                платёжными системами и проверять валидацию транзакций, не затрагивая сущности и объекты
+                                значений напрямую.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Цели Архитектуры -->
+    <div class="card mt-5" id="architectureGoalsCard">
+        <div class="accordion" id="architectureGoalsAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingArchitectureGoals">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseArchitectureGoals" aria-expanded="true"
+                            aria-controls="collapseArchitectureGoals">
+                        Цели Архитектуры
+                    </button>
+                </h2>
+                <div id="collapseArchitectureGoals" class="accordion-collapse collapse show"
+                     aria-labelledby="headingArchitectureGoals" data-bs-parent="#architectureGoalsAccordion">
+                    <div class="accordion-body">
+                        Цели архитектуры — это основополагающие принципы, которые помогают сделать систему гибкой,
+                        поддерживаемой и лёгкой в развитии. Архитектурный подход направлен на то, чтобы приложение могло
+                        эволюционировать и адаптироваться к изменениям без нарушения работы. Вот основные цели, которые
+                        должна обеспечивать архитектура:
+
+                        <h5>1. Удобочитаемость и поддерживаемость кода</h5>
+                        <p>
+                            Код должен быть легко читаемым и понятным для любого разработчика, который работает с ним,
+                            будь то новичок или опытный специалист. Это достигается через использование понятных имён
+                            классов, методов и переменных, а также правильную структуру проекта.
+                        </p>
+
+                        <h5>2. Модульность и возможность лёгкой адаптации к изменениям</h5>
+                        <p>
+                            Приложение должно быть разделено на отдельные модули, каждый из которых решает свою задачу.
+                            Если необходимо изменить какой-либо бизнес-процесс, разработчик может изменить только
+                            соответствующий модуль, не затрагивая другие части системы. Это помогает легко вносить
+                            изменения и добавлять новые функции.
+                        </p>
+
+                        <h5>3. Легкость в тестировании</h5>
+                        <p>
+                            Хорошо спроектированное приложение позволяет легко тестировать каждый его компонент. Это
+                            значит, что каждый модуль или класс должен быть протестирован отдельно, что упрощает
+                            обнаружение и исправление ошибок. Тесты помогают убедиться, что изменения в одной части
+                            системы не приводят к проблемам в других частях.
+                        </p>
+
+                        <h5>4. Расширяемость системы</h5>
+                        <p>
+                            Приложение должно быть легко расширяемым: добавление новых функций и возможностей не должно
+                            требовать изменений в существующем коде. Это достигается за счёт использования интерфейсов и
+                            абстракций. Например, добавление нового способа оплаты или новой бизнес-логики не должно
+                            приводить к переписыванию большого объёма кода.
+                        </p>
+
+                        <h5>5. Независимость от внешних систем</h5>
+                        <p>
+                            Архитектура должна быть построена таким образом, чтобы можно было легко заменить любую
+                            внешнюю систему (например, базу данных или сторонний API) без изменений в бизнес-логике. Это
+                            позволяет адаптироваться к изменениям технологий и требований без значительных усилий.
+                        </p>
+
+                        <h5>6. Устойчивость к изменениям</h5>
+                        <p>
+                            Изменения требований к системе — это нормальная часть процесса разработки. Архитектура
+                            должна быть устойчивой к таким изменениям: изменение одной части системы не должно приводить
+                            к необходимости изменять другие части, не связанные напрямую с этим изменением.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <a href="index.html" class="btn btn-back mt-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left"
+             viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                  d="M15 8a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 0 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 7.5H14.5A.5.5 0 0 1 15 8z"/>
+        </svg>
+        Назад к манифесту
+    </a>
+</div>
+
+<script src="./scripts/bootstrap.bundle.min.js"></script>
+</body>
+</html>
